@@ -3,6 +3,7 @@ const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 const { generateGroundedResearch } = require('./aiResearchService.cjs');
+const { getNewsAndSentiment } = require('./newsAndSentimentService.cjs');
 
 const app = express();
 app.use(cors());
@@ -52,6 +53,17 @@ app.post('/api/ai/research', async (req, res) => {
   }
 });
 
+// Financial News Sentiment & Earnings endpoint
+app.get('/api/news/sentiment', async (req, res) => {
+  const { symbol = 'AAPL' } = req.query;
+
+  try {
+    const data = await getNewsAndSentiment(symbol);
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch news and sentiment data' });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
