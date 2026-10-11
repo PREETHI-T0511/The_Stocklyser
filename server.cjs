@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
+const { generateGroundedResearch } = require('./aiResearchService.cjs');
 
 const app = express();
 app.use(cors());
@@ -38,6 +39,19 @@ app.get('/api/stocks/candles', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch candle data' });
   }
 });
+
+// AI Research Assistant endpoint
+app.post('/api/ai/research', async (req, res) => {
+  const { symbol = 'AAPL', query = 'Analyze current financial performance' } = req.body;
+
+  try {
+    const report = await generateGroundedResearch(symbol, query);
+    res.json(report);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to generate research report' });
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
