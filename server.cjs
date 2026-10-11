@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const { generateGroundedResearch } = require('./aiResearchService.cjs');
 const { getNewsAndSentiment } = require('./newsAndSentimentService.cjs');
+const { runSMACrossoverBacktest } = require('./backtestService.cjs');
 
 const app = express();
 app.use(cors());
@@ -62,6 +63,34 @@ app.get('/api/news/sentiment', async (req, res) => {
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch news and sentiment data' });
+  }
+});
+
+
+// Strategy Backtester Endpoint
+app.post('/api/backtest', async (req, res) => {
+  const { shortPeriod = 5, longPeriod = 20, initialCapital = 10000 } = req.body;
+
+  try {
+    // Generate synthetic historical candles for backtesting
+    const mockCandles = Array.from({ length: 120 }, (_, i) => {
+      const date = new Date();
+      date.setDate(date.getDate() - (120 - i));
+      const close = 100 + Math.sin(i / 6) * 15 + (i * 0.2);
+      return {
+        time: date.toISOString().split('T')[0],
+        open: close - 0.5,
+        high: close + 1.5,
+        low: close - 1.5,
+        close: parseFloat(close.toFixed(2)),
+        volume: 50000,
+      };
+    });
+
+    const results = runSMACrossoverBacktest(mockCandles, shortPeriod, longPeriod, initialCapital);
+    res.json(results);
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Failed to execute backtest' });
   }
 });
 
