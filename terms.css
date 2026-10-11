@@ -1,0 +1,42 @@
+#termsHeader,#AboutUsHeader{
+    padding:0px;
+    
+    border:0px;
+   padding-top:15px;
+    position:fixed;;
+    top:0;
+    width:100%;
+    align-items:top;
+    display:flex;
+    
+    justify-content:space-around;
+    background-color:rgb(238, 238, 238);
+    padding-bottom:20px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+#termsBody,#AboutUsBody{
+    background-color:#E9CECD;
+    padding-top:200px;
+    height:800px;
+ padding-left:400px;
+    padding-right:400px;}
+#content,#about_content{
+    background-color: rgb(238, 238, 238);
+    padding:20px;
+    border-radius:10px;
+   color:#524f4f;
+   font-family: "Playwrite DE SAS", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+    
+}
+#about_content{
+    height:650px;
+    font-size:1.1em;
+}
+ 
+

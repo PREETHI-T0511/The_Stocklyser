@@ -1,0 +1,21 @@
+#AboutUsHeader{
+     padding:0px;
+    
+    border:0px;
+   padding-top:15px;
+    position:fixed;;
+    top:0;
+    width:100%;
+    align-items:top;
+    display:flex;
+    
+    justify-content:space-around;
+    background-color:rgb(238, 238, 238);
+    padding-bottom:5px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+
+    
+}

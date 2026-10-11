@@ -1,0 +1,39 @@
+{
+  "name": "stocklyser",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stock and commodity analysis and screening tool for investors",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.cjs",
+    "server:dev": "nodemon server.cjs",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.2",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.7",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "lightweight-charts": "^5.2.1",
+    "mongoose": "^8.3.0",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "web-vitals": "^3.5.2",
+    "yahoo-finance2": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "vite": "^5.2.8"
+  }
+}

@@ -1,0 +1,152 @@
+html{
+    margin:0px;
+    padding:0;
+}
+body{
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+#loginHeader{
+    padding:0px;
+    
+    border:0px;
+   padding-top:15px;
+    position:fixed;;
+    top:0;
+    width:100%;
+    align-items:top;
+    display:flex;
+    
+    justify-content:space-around;
+    background-color:rgb(238, 238, 238);
+    padding-bottom:5px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+
+    
+    
+}
+#home{
+padding-top:20px;
+color:#494f52;
+text-decoration: none;;
+}
+#home:hover{
+    color:#b85955;
+}
+#header:hover{
+    color:#b85955;
+    transition:scale(1.1);
+    
+}
+
+Link{
+    font-size: larger;
+    text-decoration: underline;
+    color:#200b97;
+    
+}
+#LoginTitle{
+    padding-bottom:0;
+     font-family: "Playwrite DE SAS", cursive;
+     font-optical-sizing: auto;
+     /* font-weight: <weight>; */
+     font-style: normal;
+    font-size:3em;
+    margin:0;
+    margin-bottom:10px;
+    color:#71797E;
+}
+#signUpBody{
+     padding-left:50px;
+     padding-right:50px;
+    margin-right:0px;
+    border:0px;
+    padding-top:200px;
+    top:0;
+    width:100%;
+    justify-content:space-around;
+    display:flex;
+    gap:50px;
+    height:35em;
+    padding-bottom:5px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    background-color:#E9CECD;
+}
+#loginBody{
+    padding:0px;
+    margin-right:0px;
+    border:0px;
+    padding-top:200px;
+    top:0;
+    width:100%;
+    justify-content:space-around;
+    display:flex;
+    gap:50px;
+    height:35em;
+    padding-bottom:5px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    background-color:#E9CECD;
+
+}
+#welcome{
+    font-size:2.5em;
+}
+#information{
+    font-size:1.5em;
+    color:#494f52;
+}
+#signUp{
+    text-decoration: none;
+    color:#200b97;
+}
+#fieldset{
+    background-color:rgb(238, 238, 238);
+    border-radius:10px;
+    padding:30px;
+    padding-left:20px;
+    padding-right:25px;
+    gap:10px;
+    width:300px;
+}
+#loginForm{
+    display:flex-box;
+    padding-left:50px;
+    align-items: right;
+    padding-right:40px;
+    padding-top:60px;
+    border-radius: 5px;
+   
+    
+
+
+}
+#email,#password,#reEnter_password{
+    height:2em;
+    border-radius:5px;
+    width:100%;
+    border:none;
+    size:100px;
+}
+#emailLabel,#passLabel,#label_reEnter_passLabel{
+    margin-bottom: 15px;;
+    color:#494f52;
+    font-size: 1.3em;
+    
+}
+#login_button{
+    background-color:#200b97;
+    color:white;
+    /* margin-left:100px;
+    margin-top:20px; */
+    height:3em;
+}

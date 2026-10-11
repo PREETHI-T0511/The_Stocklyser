@@ -1,0 +1,330 @@
+/* Multi-Stock Comparison & Sector Heatmap Styles */
+
+.compare-page-container {
+  min-height: calc(100vh - 80px);
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 90px 24px 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.compare-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.compare-title h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.compare-title p {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Tab Switcher */
+.main-mode-tabs {
+  display: flex;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.main-mode-tab {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.main-mode-tab:hover {
+  color: #f8fafc;
+}
+
+.main-mode-tab.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Ticker Selection Bar */
+.ticker-select-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.active-tickers-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ticker-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ticker-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ticker-pill-return {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ticker-pill-remove {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.ticker-pill-remove:hover {
+  color: #ef4444;
+}
+
+.presets-and-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.presets-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.preset-chip-btn {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.preset-chip-btn:hover {
+  border-color: #3b82f6;
+  color: #f8fafc;
+}
+
+/* Timeframe Bar */
+.compare-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px 12px 0 0;
+  padding: 12px 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.chart-stage-card {
+  background-color: #131722;
+  border: 1px solid #334155;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.compare-chart-canvas {
+  width: 100%;
+  height: 480px;
+}
+
+/* Performance Table */
+.metrics-table-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.compare-table th {
+  background-color: #172033;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #334155;
+}
+
+.compare-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compare-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Sector Heatmap Grid */
+.heatmap-period-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sector-tile-card {
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.sector-tile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Heatmap Color Grades */
+.heat-strong-green {
+  background: linear-gradient(145deg, #065f46, #047857);
+}
+.heat-med-green {
+  background: linear-gradient(145deg, #047857, #059669);
+}
+.heat-light-green {
+  background: linear-gradient(145deg, #064e3b, #0f766e);
+}
+.heat-light-red {
+  background: linear-gradient(145deg, #7f1d1d, #881337);
+}
+.heat-med-red {
+  background: linear-gradient(145deg, #991b1b, #b91c1c);
+}
+.heat-strong-red {
+  background: linear-gradient(145deg, #7f1d1d, #991b1b);
+}
+
+.sector-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sector-tile-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sector-tile-etf {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.sector-tile-perf {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.sector-stocks-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.stock-chip-mini {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sector-compare-btn {
+  margin-top: 14px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background 0.15s;
+}
+
+.sector-compare-btn:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
