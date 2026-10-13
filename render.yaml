@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: stocklyser-backend
+    env: node
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: node server.cjs
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+
+  - type: web
+    name: stocklyser-frontend
+    env: static
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    staticPublishPath: ./dist
